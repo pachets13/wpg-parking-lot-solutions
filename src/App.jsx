@@ -8,12 +8,16 @@ import SnowIce from './pages/SnowIce'
 import DesignBuild from './pages/DesignBuild'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import { initScrollAnimations } from './utils/scrollAnimations'
 
-// Scrolls to top on every route change
+// Scrolls to top and initialises scroll animations on every route change
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
     window.scrollTo(0, 0)
+    // Small delay lets React finish rendering the new page before observing
+    const timer = setTimeout(initScrollAnimations, 50)
+    return () => clearTimeout(timer)
   }, [pathname])
   return null
 }

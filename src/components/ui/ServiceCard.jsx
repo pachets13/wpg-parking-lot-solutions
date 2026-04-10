@@ -29,9 +29,9 @@ const icons = {
   ),
 }
 
-export default function ServiceCard({ service }) {
+export default function ServiceCard({ service, fadeDelay = 0 }) {
   return (
-    <Link to={service.slug} className="service-card">
+    <Link to={service.slug} className="service-card" data-fade style={{ transitionDelay: `${fadeDelay}ms` }}>
       <div className="service-card__icon">
         {icons[service.id]}
       </div>

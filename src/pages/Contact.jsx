@@ -1,11 +1,17 @@
 import { siteConfig } from '../data/siteConfig'
 import QuoteForm from '../components/sections/QuoteForm'
+import SEO from '../components/SEO'
 
 export default function Contact() {
   const { contact } = siteConfig
 
   return (
     <>
+      <SEO
+        title="Contact Us — Request a Parking Lot Quote"
+        description="Contact WPG Parking Lot Solutions in Winnipeg for a commercial parking lot quote. We respond within one business day. Serving Winnipeg, MB and surrounding area."
+        path="/contact"
+      />
       {/* ── Page Header ─────────────────────────────────────── */}
       <div style={{ background: 'var(--color-ink)', paddingTop: 'var(--space-24)', paddingBottom: 'var(--space-16)' }}>
         <div className="container">

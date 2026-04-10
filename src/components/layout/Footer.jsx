@@ -99,9 +99,19 @@ export default function Footer() {
           {/* Service area column */}
           <div>
             <div className="footer__col-heading">Service Area</div>
-            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-silver)', lineHeight: 'var(--leading-relaxed)' }}>
-              {contact.serviceArea}
+            <p style={{ fontSize: 'var(--text-sm)', color: 'var(--color-silver)', marginBottom: 'var(--space-3)' }}>
+              Proudly serving Winnipeg and surrounding communities:
             </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+              {[
+                'Winnipeg', 'Steinbach', 'Selkirk', 'St. Boniface', 'Transcona',
+                'East Kildonan', 'West Kildonan', 'Portage la Prairie', 'Stonewall', 'Headingley',
+              ].map(community => (
+                <div key={community} className="footer__nav-link" style={{ width: '50%', pointerEvents: 'none', cursor: 'default' }}>
+                  {community}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

@@ -1,16 +1,22 @@
 import { Link } from 'react-router-dom'
 import Hero from '../components/sections/Hero'
+import SEO from '../components/SEO'
 
 export default function About() {
   return (
     <>
+      <SEO
+        title="About Us — 30+ Years of Commercial Expertise"
+        description="WPG Parking Lot Solutions has served commercial property managers in Winnipeg since 1996. Learn about our team, values, and year-round maintenance approach."
+        path="/about"
+      />
       <Hero
         eyebrow="Winnipeg, Manitoba"
         title={<>Who We <em>Are</em></>}
         subtitle="Founded to bring a higher standard of care to commercial exterior properties across Winnipeg — and the experience to back it up."
         ctaPrimary={{ label: 'Get a Quote', to: '/contact' }}
         bgImage="/assets/images/hero/hero-about.jpg"
-        size="short"
+        size="full"
       />
 
       {/* ── Company Story ────────────────────────────────────── */}
@@ -18,22 +24,22 @@ export default function About() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-16)', alignItems: 'start' }}>
             <div>
-              <span className="eyebrow">Our Story</span>
+              <span data-fade className="eyebrow">Our Story</span>
               <div className="divider" />
-              <h2 className="heading-md">Built from construction and renovation roots.</h2>
-              <p className="body-lg" style={{ marginTop: 'var(--space-5)' }}>
-                WPG Parking Lot Solutions and Concrete was founded in 2023 — but the expertise behind
+              <h2 data-fade style={{ transitionDelay: '100ms' }} className="heading-md">Built from construction and renovation roots.</h2>
+              <p data-fade style={{ transitionDelay: '200ms', marginTop: 'var(--space-5)' }} className="body-lg">
+                WPG Parking Lot Solutions and Concrete was founded in 1996 — built on expertise that
                 it spans more than three decades. Our principals built their careers in
                 construction and renovation before turning their focus to commercial exterior
                 property maintenance.
               </p>
-              <p className="body-lg" style={{ marginTop: 'var(--space-4)' }}>
+              <p data-fade style={{ transitionDelay: '300ms', marginTop: 'var(--space-4)' }} className="body-lg">
                 That background shows up in how we work. We think in systems — drainage,
                 surface durability, maintenance cycles — not just in individual job scopes.
                 We spec materials for longevity, not just price. And we take accountability
                 seriously, because in construction, the work either holds up or it doesn't.
               </p>
-              <p className="body-lg" style={{ marginTop: 'var(--space-4)' }}>
+              <p data-fade style={{ transitionDelay: '400ms', marginTop: 'var(--space-4)' }} className="body-lg">
                 We work exclusively with commercial property managers and owners. That focus
                 lets us specialize in the scale, the expectations, and the year-round demands
                 of commercial properties. Residential referrals go elsewhere — by design.
@@ -60,9 +66,9 @@ export default function About() {
       <section className="section section--light">
         <div className="container">
           <div className="section-header">
-            <span className="eyebrow">How We Work</span>
+            <span data-fade className="eyebrow">How We Work</span>
             <div className="divider" />
-            <h2 className="heading-md">What drives us.</h2>
+            <h2 data-fade style={{ transitionDelay: '100ms' }} className="heading-md">What drives us.</h2>
           </div>
 
           <div className="feature-list" style={{ marginTop: 'var(--space-10)' }}>
@@ -83,8 +89,8 @@ export default function About() {
                 title: 'Accountability',
                 body: 'We stand behind our work. If something\'s not right, we make it right. That\'s what three-plus decades of doing this kind of work teaches you.',
               },
-            ].map(item => (
-              <div key={item.title} className="feature-item">
+            ].map((item, i) => (
+              <div key={item.title} className="feature-item" data-fade style={{ transitionDelay: `${i * 120}ms` }}>
                 <h3 className="feature-item__title">{item.title}</h3>
                 <p className="feature-item__body">{item.body}</p>
               </div>
@@ -96,11 +102,11 @@ export default function About() {
       {/* ── CTA ─────────────────────────────────────────────── */}
       <section className="cta-banner">
         <div className="container">
-          <h2 className="cta-banner__title">Have a project in mind?</h2>
-          <p className="cta-banner__subtitle">
+          <h2 data-fade className="cta-banner__title">Have a project in mind?</h2>
+          <p data-fade style={{ transitionDelay: '100ms' }} className="cta-banner__subtitle">
             Contact us today — we'll talk through your property's needs and put together a quote.
           </p>
-          <div className="cta-banner__actions">
+          <div data-fade style={{ transitionDelay: '200ms' }} className="cta-banner__actions">
             <Link to="/contact" className="btn btn-primary btn-lg">Request a Quote</Link>
             <a href="tel:+12047771467" className="btn btn-outline btn-lg">(204) 777-1467</a>
           </div>

@@ -5,9 +5,9 @@
 export const siteConfig = {
   company: {
     name: 'WPG Parking Lot Solutions and Concrete',
-    legalName: 'D and L Landscaping Ltd.',
+    legalName: 'WPG Parking Lot Solutions and Concrete',
     tagline: 'The All Season Parking Lot Experts',
-    established: 2023,
+    established: 1996,
     experience: '30+',
   },
   contact: {
@@ -20,10 +20,10 @@ export const siteConfig = {
     serviceArea: 'Winnipeg, Manitoba and surrounding area',
   },
   social: {
-    instagram: 'https://instagram.com/dl_concrete',
-    instagramHandle: '@dl_concrete',
-    linkedin: 'https://linkedin.com/company/d-l-landscaping-and-concrete',
-    twitter: 'https://twitter.com/dandlworks',
-    twitterHandle: '@dandlworks',
+    instagram: 'https://instagram.com',
+    instagramHandle: '@wpgparkinglotsolutions',
+    linkedin: 'https://linkedin.com',
+    twitter: 'https://x.com',
+    twitterHandle: '@wpgparkinglotsolutions',
   },
 }

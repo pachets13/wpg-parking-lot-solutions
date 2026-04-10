@@ -21,9 +21,10 @@ export default function Hero({
   ctaSecondary,
   bgImage,
   size = 'full',
+  scrollHint = false,
 }) {
   const bgStyle = bgImage
-    ? { backgroundImage: `url(${bgImage})` }
+    ? { backgroundImage: `url(${import.meta.env.BASE_URL}${bgImage.replace(/^\//, '')})` }
     : {}
 
   return (
@@ -33,17 +34,17 @@ export default function Hero({
       <div className="hero__content container">
         <div className="hero__inner">
           {eyebrow && (
-            <span className="eyebrow eyebrow--light">{eyebrow}</span>
+            <span data-hero-fade style={{ animationDelay: '0ms' }} className="eyebrow eyebrow--light">{eyebrow}</span>
           )}
 
-          <h1 className="hero__title">{title}</h1>
+          <h1 data-hero-fade style={{ animationDelay: '120ms' }} className="hero__title">{title}</h1>
 
           {subtitle && (
-            <p className="hero__subtitle">{subtitle}</p>
+            <p data-hero-fade style={{ animationDelay: '240ms' }} className="hero__subtitle">{subtitle}</p>
           )}
 
           {(ctaPrimary || ctaSecondary) && (
-            <div className="hero__ctas">
+            <div data-hero-fade style={{ animationDelay: '360ms' }} className="hero__ctas">
               {ctaPrimary && (
                 <Link to={ctaPrimary.to} className="btn btn-primary btn-lg">
                   {ctaPrimary.label}
@@ -59,7 +60,7 @@ export default function Hero({
         </div>
       </div>
 
-      {size === 'full' && (
+      {scrollHint && (
         <div className="hero__scroll-hint" aria-hidden="true">
           <div className="hero__scroll-line" />
         </div>
