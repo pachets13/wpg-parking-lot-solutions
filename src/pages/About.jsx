@@ -45,18 +45,12 @@ export default function About() {
                 of commercial properties. Residential referrals go elsewhere — by design.
               </p>
             </div>
-            <div>
-              {/* Placeholder — swap for real photo */}
-              <div style={{
-                aspectRatio: '3/4',
-                background: 'linear-gradient(135deg, #2a2a2a 0%, #3d3d3d 100%)',
-                borderRadius: 'var(--radius-lg)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <span style={{ color: 'var(--color-mid)', fontSize: 'var(--text-sm)' }}>[ Team or job site photo ]</span>
-              </div>
+            <div data-fade style={{ transitionDelay: '150ms', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+              <img
+                src={`${import.meta.env.BASE_URL}assets/images/about-team.png`}
+                alt="WPG Parking Lot Solutions team"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
             </div>
           </div>
         </div>

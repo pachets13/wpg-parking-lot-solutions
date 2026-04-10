@@ -93,13 +93,6 @@ export default function Navbar() {
               About
             </NavLink>
 
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => `navbar__link${isActive ? ' active' : ''}`}
-            >
-              Contact
-            </NavLink>
-
             <Link to="/contact" className="btn btn-primary btn-sm">
               Get a Quote
             </Link>
@@ -139,7 +132,6 @@ export default function Navbar() {
             </NavLink>
           ))}
           <NavLink to="/about" className="navbar__mobile-link">About</NavLink>
-          <NavLink to="/contact" className="navbar__mobile-link">Contact</NavLink>
           <div className="navbar__mobile-cta">
             <Link to="/contact" className="btn btn-primary" style={{ width: '100%' }}>
               Get a Quote

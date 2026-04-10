@@ -181,8 +181,8 @@ export default function QuoteForm() {
           {status === 'error' && (
             <p style={{ color: 'var(--color-error)', fontSize: 'var(--text-sm)', marginTop: 'var(--space-3)', textAlign: 'center' }}>
               Something went wrong. Please try again or email us at{' '}
-              <a href="mailto:info@dandlworks.ca" style={{ color: 'var(--color-amber)' }}>
-                info@dandlworks.ca
+              <a href="mailto:info@wpgparkinglotsolutions.ca" style={{ color: 'var(--color-amber)' }}>
+                info@wpgparkinglotsolutions.ca
               </a>.
             </p>
           )}

@@ -92,7 +92,6 @@ export default function Footer() {
           <div>
             <div className="footer__col-heading">Company</div>
             <Link to="/about" className="footer__nav-link">About WPG Parking Lot Solutions</Link>
-            <Link to="/contact" className="footer__nav-link">Contact Us</Link>
             <Link to="/contact" className="footer__nav-link">Request a Quote</Link>
           </div>
 
