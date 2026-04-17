@@ -267,26 +267,23 @@ input, textarea, select {
 
 /* ─── Navbar ─────────────────────────────────────────────────────── */
 
-.navbar {
+.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  height: var(--navbar-height);
-  background-color: rgba(26, 26, 26, 0.70);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid transparent;
-  box-shadow: none;
-  transition:
-    background-color 300ms ease,
-    border-color 300ms ease,
-    box-shadow 300ms ease;
 }
 
-.navbar--scrolled {
-  background-color: rgba(26, 26, 26, 0.96);
-  border-bottom-color: var(--color-border-dark);
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.45);
+.navbar {
+  height: var(--navbar-height);
+  background-color: var(--color-charcoal);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 300ms ease;
+}
+
+.site-header--scrolled .navbar {
+  border-bottom-color: var(--color-amber);
 }
 
 .navbar__inner {
@@ -307,11 +304,6 @@ input, textarea, select {
   height: 66px;
   width: auto;
   display: block;
-  transition: height 300ms ease;
-}
-
-.navbar--scrolled .navbar__logo-img {
-  height: 52px;
 }
 
 .navbar__links {

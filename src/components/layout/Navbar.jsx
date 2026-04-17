@@ -52,8 +52,8 @@ export default function Navbar() {
   const isServicesActive = services.some(s => location.pathname === s.to)
 
   return (
-    <header>
-      <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
+    <header className={`site-header${scrolled ? ' site-header--scrolled' : ''}`}>
+      <nav className="navbar">
         <div className="container navbar__inner">
           {/* Logo */}
           <Link to="/" className="navbar__logo">
