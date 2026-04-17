@@ -11,6 +11,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
+  const closeTimerRef = useRef(null)
   const location = useLocation()
 
   // Close menus on route change
@@ -19,16 +20,24 @@ export default function Navbar() {
     setDropdownOpen(false)
   }, [location.pathname])
 
-  // Close dropdown on outside click
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
-        setDropdownOpen(false)
-      }
+  // Clean up timer on unmount
+  useEffect(() => () => clearTimeout(closeTimerRef.current), [])
+
+  function openDropdown() {
+    clearTimeout(closeTimerRef.current)
+    setDropdownOpen(true)
+  }
+
+  function scheduleClose() {
+    closeTimerRef.current = setTimeout(() => setDropdownOpen(false), 150)
+  }
+
+  function handleTriggerKeyDown(e) {
+    if (e.key === 'Escape') {
+      setDropdownOpen(false)
+      dropdownRef.current?.querySelector('button')?.focus()
     }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
+  }
 
   const isServicesActive = services.some(s => location.pathname === s.to)
 
@@ -48,10 +57,16 @@ export default function Navbar() {
           {/* Desktop links */}
           <div className="navbar__links">
             {/* Services dropdown */}
-            <div className="navbar__dropdown" ref={dropdownRef}>
+            <div
+              className="navbar__dropdown"
+              ref={dropdownRef}
+              onMouseEnter={openDropdown}
+              onMouseLeave={scheduleClose}
+            >
               <button
                 className={`navbar__dropdown-trigger${isServicesActive ? ' active' : ''}`}
                 onClick={() => setDropdownOpen(o => !o)}
+                onKeyDown={handleTriggerKeyDown}
                 aria-expanded={dropdownOpen}
                 aria-haspopup="true"
               >
@@ -70,20 +85,22 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              {dropdownOpen && (
-                <div className="navbar__dropdown-menu" role="menu">
-                  {services.map(s => (
-                    <NavLink
-                      key={s.to}
-                      to={s.to}
-                      className="navbar__dropdown-item"
-                      role="menuitem"
-                    >
-                      {s.label}
-                    </NavLink>
-                  ))}
-                </div>
-              )}
+              <div
+                className={`navbar__dropdown-menu${dropdownOpen ? ' navbar__dropdown-menu--open' : ''}`}
+                role="menu"
+                onKeyDown={handleTriggerKeyDown}
+              >
+                {services.map(s => (
+                  <NavLink
+                    key={s.to}
+                    to={s.to}
+                    className="navbar__dropdown-item"
+                    role="menuitem"
+                  >
+                    {s.label}
+                  </NavLink>
+                ))}
+              </div>
             </div>
 
             <NavLink
