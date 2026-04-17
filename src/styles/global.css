@@ -378,6 +378,7 @@ input, textarea, select {
 
 .navbar__dropdown-item {
   display: block;
+  position: relative;
   padding: var(--space-3) var(--space-5);
   font-size: var(--text-sm);
   font-weight: var(--font-weight-medium);
@@ -387,9 +388,26 @@ input, textarea, select {
   white-space: nowrap;
 }
 
+.navbar__dropdown-item::after {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--space-3) - 2px);
+  left: var(--space-5);
+  right: var(--space-5);
+  height: 1px;
+  background-color: var(--color-amber);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-fast);
+}
+
 .navbar__dropdown-item:hover {
   background-color: var(--color-mid);
   color: var(--color-white);
+}
+
+.navbar__dropdown-item:hover::after {
+  transform: scaleX(1);
 }
 
 /* Mobile toggle */
