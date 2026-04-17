@@ -263,7 +263,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div data-fade style={{ transitionDelay: '150ms' }} className="about-image-frame">
+            <div data-fade style={{ transitionDelay: '100ms' }} className="about-image-frame">
               <img
                 src={`${import.meta.env.BASE_URL}assets/images/hero/hero-about.jpg`}
                 alt="WPG Parking Lot Solutions team at a Winnipeg commercial parking lot job site"

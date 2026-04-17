@@ -108,7 +108,7 @@ export default function SnowIce() {
               { label: 'A Typical Winnipeg Winter Parking Lot', file: 'comparison-before.png' },
               { label: 'A Winnipeg Winter Parking Lot Maintained by WPG Parking Lot Solutions', file: 'comparison-after.png' },
             ].map((item, i) => (
-              <div key={item.label} data-fade style={{ transitionDelay: `${i * 150}ms` }}>
+              <div key={item.label} data-fade style={{ transitionDelay: `${i * 200}ms` }}>
                 <div style={{
                   aspectRatio: '16/9',
                   borderRadius: 'var(--radius-lg)',
@@ -133,7 +133,7 @@ export default function SnowIce() {
       {/* ── Snow Clearing ────────────────────────────────────── */}
       <section className="section section--white">
         <div className="container">
-          <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: 'var(--space-12)', aspectRatio: '21/9' }}>
+          <div data-fade style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', marginBottom: 'var(--space-12)', aspectRatio: '21/9' }}>
             <img
               src={`${import.meta.env.BASE_URL}assets/images/services/equipment-snow.jpg`}
               alt="WPG Parking Lot Solutions commercial snow clearing equipment — loader and skid steer for Winnipeg parking lots"

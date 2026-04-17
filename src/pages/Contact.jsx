@@ -15,12 +15,12 @@ export default function Contact() {
       {/* ── Page Header ─────────────────────────────────────── */}
       <div style={{ background: 'var(--color-ink)', paddingTop: 'var(--space-24)', paddingBottom: 'var(--space-16)' }}>
         <div className="container">
-          <span className="eyebrow">Let's Talk</span>
+          <span data-fade className="eyebrow">Let's Talk</span>
           <div className="divider" />
-          <h1 className="heading-xl" style={{ color: 'var(--color-white)', maxWidth: 640 }}>
+          <h1 data-fade style={{ transitionDelay: '100ms', color: 'var(--color-white)', maxWidth: 640 }} className="heading-xl">
             Request a quote.
           </h1>
-          <p className="body-lg--light" style={{ marginTop: 'var(--space-5)', maxWidth: 560 }}>
+          <p data-fade style={{ transitionDelay: '200ms', marginTop: 'var(--space-5)', maxWidth: 560 }} className="body-lg--light">
             Tell us about your property and what you need — we'll follow up within one business day.
             For urgent inquiries, call us directly.
           </p>
@@ -38,7 +38,7 @@ export default function Contact() {
             </div>
 
             {/* Contact details sidebar */}
-            <div style={{ paddingTop: 'var(--space-2)' }}>
+            <div data-fade style={{ paddingTop: 'var(--space-2)', transitionDelay: '100ms' }}>
               <h2 style={{
                 fontSize: 'var(--text-xs)',
                 fontWeight: 'var(--font-weight-semibold)',

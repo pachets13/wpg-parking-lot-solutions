@@ -91,7 +91,7 @@ export default function DesignBuild() {
 
       {/* ── Portfolio Image ─────────────────────────────────── */}
       <section style={{ background: 'var(--color-ink)', padding: '0' }}>
-        <div style={{ aspectRatio: '21/9', overflow: 'hidden' }}>
+        <div data-fade style={{ aspectRatio: '21/9', overflow: 'hidden' }}>
           <img
             src={`${import.meta.env.BASE_URL}assets/images/services/design-build-2.png`}
             alt="Completed commercial concrete parking lot project by WPG Parking Lot Solutions in Winnipeg"

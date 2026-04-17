@@ -45,7 +45,7 @@ export default function About() {
                 of commercial properties. Residential referrals go elsewhere — by design.
               </p>
             </div>
-            <div data-fade style={{ transitionDelay: '150ms', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
+            <div data-fade style={{ transitionDelay: '100ms', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
               <img
                 src={`${import.meta.env.BASE_URL}assets/images/about-team.png`}
                 alt="WPG Parking Lot Solutions team"

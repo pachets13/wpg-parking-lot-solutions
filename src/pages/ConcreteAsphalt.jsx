@@ -67,7 +67,7 @@ export default function ConcreteAsphalt() {
 
       {/* ── Detail Image ────────────────────────────────────── */}
       <section style={{ background: 'var(--color-snow)', padding: '0' }}>
-        <div style={{ borderRadius: 0, overflow: 'hidden', aspectRatio: '21/9' }}>
+        <div data-fade style={{ borderRadius: 0, overflow: 'hidden', aspectRatio: '21/9' }}>
           <img
             src={`${import.meta.env.BASE_URL}assets/images/services/concrete-detail.jpg`}
             alt="Commercial concrete parking lot installation in Winnipeg, Manitoba"

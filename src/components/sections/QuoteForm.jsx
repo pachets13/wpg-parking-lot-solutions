@@ -58,7 +58,7 @@ export default function QuoteForm() {
   }
 
   return (
-    <form className="quote-form" onSubmit={handleSubmit} noValidate>
+    <form className="quote-form" onSubmit={handleSubmit} noValidate data-fade>
       <div className="form-grid">
         {/* Name */}
         <div className="form-group">
@@ -83,7 +83,7 @@ export default function QuoteForm() {
             name="company"
             type="text"
             className="form-input"
-            placeholder="Acme Property Management"
+            placeholder="Winnipeg Plaza Ltd."
             value={formData.company}
             onChange={handleChange}
             required
