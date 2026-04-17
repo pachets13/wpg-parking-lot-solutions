@@ -10,6 +10,7 @@ const services = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef(null)
   const closeTimerRef = useRef(null)
   const location = useLocation()
@@ -19,6 +20,15 @@ export default function Navbar() {
     setMobileOpen(false)
     setDropdownOpen(false)
   }, [location.pathname])
+
+  // Track scroll position for sticky treatment
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   // Clean up timer on unmount
   useEffect(() => () => clearTimeout(closeTimerRef.current), [])
@@ -43,7 +53,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="navbar">
+      <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
         <div className="container navbar__inner">
           {/* Logo */}
           <Link to="/" className="navbar__logo">
