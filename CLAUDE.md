@@ -159,3 +159,6 @@ Force a hard refresh (**Cmd+Shift+R**) to bypass the browser cache and see the u
 - **Fonts:** Inter via Google Fonts, loaded in `index.html`.
 - **Images:** All placeholder gradients until real photography is provided. Drop-in ready.
 - **Deployment:** `npm run deploy` pushes `/dist` to the `gh-pages` branch automatically.
+- **Animations:** Two-mechanism system — `[data-hero-fade]` (page load keyframe) for above-fold hero content;
+  `[data-fade]` (IntersectionObserver) for all scroll-triggered content. Tokens in `variables.css`
+  (`--anim-duration`, `--anim-ease`, `--anim-distance`, `--stagger-sm`, `--stagger-md`). See `src/styles/NOTES.md`.

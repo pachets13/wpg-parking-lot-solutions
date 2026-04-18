@@ -19,6 +19,7 @@ Larger, page-level blocks that are either reused across pages or contain their o
 - On success: shows a thank-you message (no page reload)
 - On error: shows a fallback message with direct email link
 - Fields: Name, Company, Phone, Email, Service (dropdown), Property Address, Message
+- The `<form>` element has `data-fade` — it animates in as one unit on every page it appears
 
 ## Testimonials.jsx
 - Data-driven from `src/data/testimonials.js`
