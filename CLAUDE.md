@@ -27,6 +27,25 @@ A reusable template for future projects is saved at:
 To reuse: copy the template, update the three values in the CONFIG block
 (`OUTPUT_DIR`, `SUBDIRS`, `DOWNLOADS`) and run with your Pexels API key.
 
+### ⚠️ Deploy Workflow — Two Separate Steps
+
+**Pushing to `main` does NOT update the live site.**
+The live site is served from the `gh-pages` branch. Deploying is always a deliberate second step.
+
+**To go live:**
+```
+# Step 1 — commit and push source changes to main (standard)
+git add . && git commit -m "descriptive message" && git push origin main
+
+# Step 2 — build and publish to GitHub Pages (separate, intentional)
+npm run deploy
+```
+
+After `npm run deploy` finishes, GitHub Pages takes **1–2 minutes** to serve the new version.
+Force a hard refresh (**Cmd+Shift+R**) to bypass the browser cache and see the update.
+
+---
+
 ### Before First Deploy
 1. Update `vite.config.js` → `base: '/YOUR-REPO-NAME/'` to match your GitHub repo name.
 2. Open `src/components/sections/QuoteForm.jsx` and replace `YOUR_FORM_ID` with the Formspree form ID from your account at formspree.io.
