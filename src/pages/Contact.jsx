@@ -30,7 +30,7 @@ export default function Contact() {
       {/* ── Form + Contact Info ──────────────────────────────── */}
       <div style={{ background: 'var(--color-charcoal)', paddingBottom: 'var(--space-24)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 'var(--space-16)', paddingTop: 'var(--space-12)', alignItems: 'start' }}>
+          <div className="contact-grid">
 
             {/* Form */}
             <div>
@@ -63,7 +63,7 @@ export default function Contact() {
 
                 <div>
                   <div style={{ fontSize: 'var(--text-xs)', color: 'var(--color-muted)', letterSpacing: 'var(--tracking-wide)', textTransform: 'uppercase', marginBottom: 'var(--space-2)' }}>Email</div>
-                  <a href={contact.emailHref} style={{ fontSize: 'var(--text-base)', color: 'var(--color-amber)', textDecoration: 'none' }}>
+                  <a href={contact.emailHref} className="contact-grid__email" style={{ fontSize: 'var(--text-base)', color: 'var(--color-amber)', textDecoration: 'none', display: 'inline-block', maxWidth: '100%' }}>
                     {contact.email}
                   </a>
                 </div>

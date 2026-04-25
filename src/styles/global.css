@@ -1681,6 +1681,28 @@ input, textarea, select {
   }
 }
 
+/* ─── Contact Page Grid ─────────────────────────────────────────── */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-16);
+  padding-top: var(--space-12);
+  align-items: start;
+}
+
+.contact-grid__email {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
 /* ─── Scroll Animations ──────────────────────────────────────────── */
 
 /* Base fade-up state — elements start hidden and shifted down */
