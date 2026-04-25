@@ -298,12 +298,7 @@ export default function Home() {
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: 'var(--space-16)',
-            alignItems: 'center',
-          }}>
+          <div className="two-col-grid" style={{ alignItems: 'center' }}>
 
             {/* Left — prose */}
             <div>

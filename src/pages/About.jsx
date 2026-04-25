@@ -22,7 +22,7 @@ export default function About() {
       {/* ── Company Story ────────────────────────────────────── */}
       <section className="section section--white">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-16)', alignItems: 'start' }}>
+          <div className="two-col-grid">
             <div>
               <span data-fade className="eyebrow">Our Story</span>
               <div className="divider" />

@@ -26,6 +26,7 @@ body {
   background-color: var(--color-white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
 }
 
 img, video {
@@ -1698,6 +1699,22 @@ input, textarea, select {
 
 @media (max-width: 900px) {
   .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+/* ─── Two-Column Layout Utility ─────────────────────────────────── */
+
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .two-col-grid {
     grid-template-columns: 1fr;
     gap: var(--space-10);
   }

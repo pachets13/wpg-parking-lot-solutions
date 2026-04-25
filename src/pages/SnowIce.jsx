@@ -43,7 +43,7 @@ export default function SnowIce() {
       {/* ── Liquid De-Icing ──────────────────────────────────── */}
       <section className="section section--dark">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-16)', alignItems: 'start' }}>
+          <div className="two-col-grid">
             <div>
               <span data-fade className="eyebrow">Our Differentiator</span>
               <div className="divider" />
@@ -103,7 +103,7 @@ export default function SnowIce() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-8)', marginTop: 'var(--space-10)' }}>
+          <div className="two-col-grid" style={{ gap: 'var(--space-8)', marginTop: 'var(--space-10)' }}>
             {[
               { label: 'A Typical Winnipeg Winter Parking Lot', file: 'comparison-before.png' },
               { label: 'A Winnipeg Winter Parking Lot Maintained by WPG Parking Lot Solutions', file: 'comparison-after.png' },
