@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pachets13.github.io/wpg-parking-lot-solutions/sitemap.xml

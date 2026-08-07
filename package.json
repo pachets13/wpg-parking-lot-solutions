@@ -1,0 +1,28 @@
+{
+  "name": "wpg-parking-lot-solutions",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "find public -name '.DS_Store' -delete && node scripts/check-anonymity.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && bash scripts/deploy.sh",
+    "download-images-unsplash": "node scripts/download-images.js",
+    "download-images-pexels": "node scripts/download-images-pexels.js",
+    "postbuild": "node scripts/check-anonymity.mjs --dist",
+    "test": "node scripts/test-anonymity-gate.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "^6.26.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.4.0"
+  }
+}

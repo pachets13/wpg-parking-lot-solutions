@@ -1,0 +1,13 @@
+# shared-assets.allow — assets under public/ that are byte-identical to the
+# paired private original AND have been looked at and cleared.
+#
+# Currently EMPTY, and that is the correct state: this fork shares no image
+# bytes with its private original. The only overlaps ever found were empty
+# .gitkeep placeholders (every zero-length file has the same hash, so the check
+# now excludes them) and public/assets/NOTES.md, which was a developer doc
+# living in the served directory. It was moved to docs/ on 2026-08-07 rather
+# than allowlisted — a doc that names the real client does not become safe by
+# being declared safe.
+#
+# A hash listed here is exempt FOREVER, so add one only after looking at the file.
+# Format:  <sha256>  <reason>

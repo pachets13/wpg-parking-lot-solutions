@@ -1,0 +1,17 @@
+{
+  "_comment": "Hand-maintained. How many files check-anonymity.mjs is expected to inspect. Seeing fewer is a failure: a scan that silently narrowed would otherwise pass green forever. Lower a number only in the same commit that deletes the files.",
+  "source": {
+    "paths": 100,
+    "text": 49,
+    "publicAssets": 29
+  },
+  "dist": {
+    "distFiles": 32,
+    "distText": 5
+  },
+  "history": {
+    "blobPaths": 72,
+    "blobsRead": 44,
+    "messages": 2
+  }
+}
