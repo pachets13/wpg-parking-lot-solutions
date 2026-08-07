@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="WPG Parking Lot Solutions">
+  <!-- Line-stripe yellow ground, matching the accent token. A solid field
+       reads at 16px where the full wordmark logo would collapse to mush. -->
+  <rect width="64" height="64" rx="13" fill="#F2C21A"/>
+  <!-- W drawn as a stroked polyline rather than text, so it renders identically
+       everywhere and needs no embedded font. -->
+  <path d="M13 17 L22 47 L32 28 L42 47 L51 17"
+        fill="none" stroke="#14171A" stroke-width="8"
+        stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>
